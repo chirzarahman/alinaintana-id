@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react'
 import Home from './sections/home';
 import About from './sections/about';
+import Products from './sections/products';
 
 export default function Index() {
   const [navbar, setNavbar] = useState(false)
@@ -53,6 +54,7 @@ export default function Index() {
       </nav>
       <Home />
       <About />
+      <Products />
     </>
   )
 }
