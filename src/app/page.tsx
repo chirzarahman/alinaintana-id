@@ -100,7 +100,7 @@ export default function Index() {
             </div>
           </div>
           <hr className="my-6 border-black border-[1px] sm:mx-auto lg:my-8" />
-          <span className="block font-semibold text-center">© 2023 <a href="/" className="hover:underline">Alinaintana.id</a>. All Rights Reserved.</span>
+          <span className="block font-semibold text-center">© {new Date().getFullYear()} <a href="/" className="hover:underline">Alinaintana.id</a>. All Rights Reserved.</span>
         </div>
       </footer>
     </>
