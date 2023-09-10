@@ -1,14 +1,18 @@
 import Image from "next/image";
-import { motion } from "framer-motion";
-import React, { Component } from "react";
 
 const images = [
-    "/assets/img1.jpg",
-    "/assets/img1.jpg",
-    "/assets/img1.jpg",
-    "/assets/img1.jpg",
-    "/assets/img1.jpg",
-    "/assets/img1.jpg",
+    {
+        img: '/assets/img11.jpg',
+        alt: '1'
+    },
+    {
+        img: '/assets/img11.jpg',
+        alt: '2'
+    },
+    {
+        img: '/assets/img11.jpg',
+        alt: '3'
+    }
 ];
 
 export default function Testimonials() {
@@ -31,15 +35,11 @@ export default function Testimonials() {
                 </div>
             </div>
             <div className="w-max h-max lg:h-[25rem] grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10 p-3">
-                <div className="bg-gray-300 w-[15rem] md:w-[18rem] h-[20rem] rounded-md">
-                    {/* <Image src={'/assets/img1.jpg'} className="w-full h-full" width={100} height={100} alt="1" /> */}
-                </div>
-                <div className="bg-gray-300 w-[15rem] md:w-[18rem] h-[20rem] rounded-md">
-                    {/* <Image src={'/assets/img2.jpg'} className="w-full h-full" width={100} height={100} alt="2" /> */}
-                </div>
-                <div className="bg-gray-300 w-[15rem] md:w-[18rem] h-[20rem] rounded-md">
-                    {/* <Image src={'/assets/img3.jpg'} className="w-full h-full" width={100} height={100} alt="3" /> */}
-                </div>
+                {images.map((image, i) => (
+                    <div className="bg-gray-300 w-[15rem] md:w-[18rem] h-[20rem] rounded-md" key={i}>
+                        <Image src={image.img} className="w-full h-full rounded-md" width={100} height={100} alt={image.alt} />
+                    </div>
+                ))}
             </div>
         </section>
     )
