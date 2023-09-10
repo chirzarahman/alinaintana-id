@@ -115,3 +115,27 @@
 .card:hover .card__info-hover {
   opacity: 1;
 }
+
+/* .item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+} */
+
+.item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.inner-carousel {
+  display: flex;
+  background: lightblue;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.carousel {
+  cursor: grab;
+  overflow: hidden;
+  background: #F999B7;
+}

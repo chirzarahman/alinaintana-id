@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Home() {
     return (
-        <div className="bg-[#FEE3EC] w-full px-5 md:px-20">
+        <div className="bg-[#FEE3EC] w-full px-5 md:px-20" id="home">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="w-full my-32 md:my-40 text-center md:text-start">
                     <div className="md:ml-20">

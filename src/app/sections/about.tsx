@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function About() {
     return (
-        <div className="flex flex-col items-center my-20">
+        <section className="flex flex-col items-center my-20" id="about">
             <div className="text-center md:text-start md:flex md:items-center w-4/5 md:justify-between mb-10">
                 <div className="md:w-1/4 md:border-l-[3px] md:border-[#F999B7] md:pl-5">
                     <h1 className="text-4xl font-semibold">New Arrivals this Season</h1>
@@ -25,6 +25,6 @@ export default function About() {
                     <Image src={'/assets/img3.jpg'} className="w-full h-full" width={100} height={100} alt="3" />
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

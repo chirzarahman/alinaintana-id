@@ -4,14 +4,15 @@ import { useState } from 'react'
 import Home from './sections/home';
 import About from './sections/about';
 import Products from './sections/products';
+import Testimonials from './sections/testimonials';
 
 export default function Index() {
   const [navbar, setNavbar] = useState(false)
   const menus = [
-    { title: 'home' },
-    { title: 'about' },
-    { title: 'product' },
-    { title: 'testimoni' },
+    { title: 'home', link: '#home' },
+    { title: 'about', link: '#about' },
+    { title: 'hijabs', link: '#hijabs' },
+    { title: 'testimonials', link: '#testimonials' },
   ]
 
   return (
@@ -42,7 +43,7 @@ export default function Index() {
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border-2 border-pink-500 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
               {menus.map((menu, i) => (
                 <li key={i}>
-                  <Link href="#" className="block py-2 capitalize font-semibold md:bg-transparent md:p-0"
+                  <Link href={menu.link} className="block py-2 capitalize font-semibold md:bg-transparent md:p-0 scroll-smooth"
                     onClick={() => setNavbar(!navbar)}>
                     {menu.title}
                   </Link>
@@ -55,6 +56,48 @@ export default function Index() {
       <Home />
       <About />
       <Products />
+      <Testimonials />
+      <footer className="bg-[#F999B7]">
+        <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+          <div className="sm:flex sm:items-center sm:justify-between">
+            <div>
+              <a href="https://flowbite.com/" className="flex items-center mb-4 sm:mb-0 justify-center md:justify-start">
+                <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="Flowbite Logo" />
+                <span className="self-center text-2xl font-semibold whitespace-nowrap">LOGO</span>
+              </a>
+              <p className="hidden md:block w-[60%] mt-5">Lorem ipsum dolor sit amet consectetur. Justo pharetra tincidunt</p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-xl md:text-base text-center md:text-start">You can contact us with</h4>
+              <ul className="flex flex-wrap items-center my-6 text-sm font-medium sm:mb-0 gap-x-3 justify-center">
+                <li>
+                  <a href="#" className="text-black border border-black hover:bg-black hover:text-white focus:ring-4 focus:outline-none font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center">
+                    <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 -960 960 960">
+                      <path d="M795-120q-116 0-236.5-56T335-335Q232-438 176-558.5T120-795q0-19 13-32t32-13h140q14 0 24 10t14 25l27 126q2 14-.5 25.5T359-634L259-533q26 44 55 82t64 72q37 38 78 69.5t86 55.5l95-98q10-11 23-15t26-2l119 26q15 4 25 16t10 27v135q0 19-13 32t-32 13Z" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-black border border-black hover:bg-black hover:text-white focus:ring-4 focus:outline-none font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center">
+                    <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 -960 960 960">
+                      <path d="M795-120q-116 0-236.5-56T335-335Q232-438 176-558.5T120-795q0-19 13-32t32-13h140q14 0 24 10t14 25l27 126q2 14-.5 25.5T359-634L259-533q26 44 55 82t64 72q37 38 78 69.5t86 55.5l95-98q10-11 23-15t26-2l119 26q15 4 25 16t10 27v135q0 19-13 32t-32 13Z" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-black border border-black hover:bg-black hover:text-white focus:ring-4 focus:outline-none font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center">
+                    <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 -960 960 960">
+                      <path d="M795-120q-116 0-236.5-56T335-335Q232-438 176-558.5T120-795q0-19 13-32t32-13h140q14 0 24 10t14 25l27 126q2 14-.5 25.5T359-634L259-533q26 44 55 82t64 72q37 38 78 69.5t86 55.5l95-98q10-11 23-15t26-2l119 26q15 4 25 16t10 27v135q0 19-13 32t-32 13Z" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr className="my-6 border-black border-[1px] sm:mx-auto lg:my-8" />
+          <span className="block font-semibold sm:text-center">© 2023 <a href="/" className="hover:underline">Alinaintana.id</a>. All Rights Reserved.</span>
+        </div>
+      </footer>
     </>
   )
 }
